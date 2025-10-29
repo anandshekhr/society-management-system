@@ -10,6 +10,8 @@ class Society(models.Model):
     established_date = models.DateField(_("Established Date"), blank=True, null=True)
     contact_email = models.EmailField(_("Contact Email"), blank=True, null=True)
     contact_phone = models.CharField(_("Contact Phone"), max_length=20, blank=True, null=True)
+    created_at = models.DateTimeField(_("Created At"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("Updated At"), auto_now=True)
     
     class Meta:
         verbose_name = _("Society")
